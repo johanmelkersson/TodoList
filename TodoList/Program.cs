@@ -32,7 +32,7 @@ while (true)
         case "4":
             manager.SaveToFile(SaveFile);
             Console.Clear();
-            PrintColor(">> Tasks saved. Goodbye!", ConsoleColor.Green);
+            PrintColor(">> Todo list saved. Goodbye!", ConsoleColor.Green);
             return;
         default:
             Console.Clear();
@@ -238,7 +238,7 @@ void EditTask(TodoList.Task task)
                 return;
             case "0":
                 Console.Clear();
-                PrintColor(">> Update Cancelled.", ConsoleColor.Yellow);
+                Console.WriteLine();
                 return;
             default:
                 Console.Clear();
