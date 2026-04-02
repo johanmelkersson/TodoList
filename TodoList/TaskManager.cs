@@ -13,7 +13,7 @@ namespace TodoList
             Converters = { new DateOnlyJsonConverter() }
         };
 
-        public List<Task> SortByDate() => [.. Tasks.OrderBy(task => task.DueDate)];
+        public List<Task> SortByDate() => [.. Tasks.OrderBy(task => task.DueDate).ThenBy(task => task.Project)];
         public List<Task> SortByProject() => [.. Tasks.OrderBy(task => task.Project).ThenBy(task => task.DueDate)];
 
         public void Add(Task task) => Tasks.Add(task);
